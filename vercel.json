@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "deepseek_html_20251027_ad2f89 (1).html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/telegram.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/telegram",
+      "dest": "/api/telegram.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/deepseek_html_20251027_ad2f89 (1).html"
+    }
+  ]
+}
